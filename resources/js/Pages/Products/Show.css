@@ -1,0 +1,61 @@
+/* กำหนดให้ container ของการ์ดสินค้าอยู่ตรงกลาง */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* ความสูงของหน้าจอทั้งหมด */
+    background-color: #f4f0ec; /* สีพื้นหลังที่ดูอบอุ่น */
+    padding: 20px;
+}
+
+/* ปรับสไตล์การ์ดสินค้า */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #d1bfa7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* ปรับหัวข้อของสินค้า */
+.product-card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8b5a2b;
+    font-weight: bold;
+}
+
+/* ปรับคำอธิบายสินค้า */
+.product-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* ปรับสไตล์ราคาสินค้า */
+.product-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 20px 0;
+}
+
+/* ปุ่มลิงก์ */
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a2785a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card .back-link:hover {
+    background-color: #a0522d;
+    transform: scale(1.05);
+}

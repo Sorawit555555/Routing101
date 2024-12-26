@@ -1,0 +1,173 @@
+
+/* พื้นหลังหลัก */
+div.index-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right top, #8b5e3c, #a2785a, #b99279, #d0ad99, #e7c8ba, #f0d5c9, #f8e2d9, #fff0e8);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+div.min-h-screen{
+    background-image: linear-gradient(to right top, #8b5e3c, #a2785a, #b99279, #d0ad99, #e7c8ba, #f0d5c9, #f8e2d9, #fff0e8);
+
+}
+/* หัวข้อสินค้า */
+.product-header {
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    font-size: 2.8rem; /* ขนาดตัวอักษรที่ใหญ่ขึ้นเล็กน้อย */
+
+    color: #8b5a2b; /* สีตัวอักษรน้ำตาลวินเทจ */
+    font-weight: bold; /* เพิ่มความหนาของตัวอักษร */
+    background: linear-gradient(90deg, #a0522d, #8b4513); /* ไล่เฉดสีน้ำตาลวินเทจ */
+    -webkit-background-clip: text; /* ตัดพื้นหลังให้เฉพาะตัวอักษร */
+    -webkit-text-fill-color: transparent; /* ทำให้พื้นหลังแสดงแทนสีตัวอักษร */
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.2), /* เงาสีดำจาง */
+        2px 2px 6px rgba(139, 69, 19, 0.7), /* เงาสีน้ำตาลเข้ม */
+        0 4px 8px rgba(160, 82, 45, 0.5); /* เงาสีน้ำตาลกลาง */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* เพิ่มการเคลื่อนไหว */
+}
+
+
+.product-header:hover {
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อโฮเวอร์ */
+    text-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.3),
+        3px 3px 8px rgba(255, 223, 0, 0.9),
+        0 6px 12px rgba(255, 223, 0, 0.8); /* เงาสว่างขึ้นเมื่อโฮเวอร์ */
+}
+/* Index.css */
+.product-image {
+    width: 300px; /* กำหนดความกว้างของรูปภาพ */
+    height: 300px; /* กำหนดความสูงของรูปภาพ */
+    object-fit: cover; /* ให้ภาพแสดงเต็มพื้นที่โดยรักษาสัดส่วน */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ภาพ */
+}
+
+
+
+/* รายการสินค้า */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* การ์ดสินค้า */
+.product-item {
+    background-color:  #d16ba5; /* เปลี่ยนสีพื้นหลังการ์ด */
+    border: 1px solid #ccc; /* ขอบการ์ดที่มีสีเข้มขึ้น */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f5c2d9; /* สีพื้นหลังเปลี่ยนเมื่อ hover */
+}
+
+/* รายละเอียดสินค้า */
+.product-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    background-color: #fff; /* เพิ่มพื้นหลังขาวให้รายละเอียดสินค้า */
+}
+
+/* ปรับสีของชื่อสินค้า */
+.product-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* ปรับสีของรายละเอียดสินค้า */
+.product-description {
+    font-size: 1rem;
+    color: #777; /* สีเทาอ่อน */
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* ปรับสีของราคา */
+.product-price {
+    font-size: 1.3rem;
+    color: #ff5722; /* สีส้มสดใสสำหรับราคาสินค้า */
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* ลิงก์สินค้า */
+.product-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a2785a; /* เปลี่ยนสีปุ่มเป็นสีเขียว */
+    color: #111104;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+    width: 80%;
+    text-align: center;
+}
+
+.product-link:hover {
+    background-color: #ff5722; /* สีปุ่มเมื่อ hover */
+    transform: scale(1.05);
+}
+
+
+/* กรอบรูปภาพ */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* ความสูงคงที่ */
+    border: 2px solid #D16BA5;
+    border-radius: 20px;
+    background-color: #5FFBF1;
+}
+
+/* การกำหนดขนาดและการจัดตำแหน่งรูปภาพภายในกรอบ */
+.image-container img {
+    width: 100%; /* ปรับขนาดรูปภาพให้เต็มความกว้างคอนเทนเนอร์ */
+    height: 100%; /* ให้สูงเต็มกรอบ */
+    object-fit: cover; /* ให้ภาพครอบกรอบโดยไม่บิดเบือน */
+    display: block;
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อโฮเวอร์ */
+}
+.bg-white  {
+    background-color: #8b6a3d;
+    color: #fff;
+
+
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+

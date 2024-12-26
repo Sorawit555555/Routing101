@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\ChirpController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,14 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::resource('chirps', ChirpController::class)
+    ->only(['index', 'store', 'update', 'destroy'])
+    ->middleware(['auth', 'verified']);
+//route เป็นกำหนดเส้นทางเพื่อเข้าถึงหน้า product Index เเละก็หน้าproduct Show
+Route::resource('products', ProductController::class)
+    ->only(['index', 'show'])
+    ->middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
